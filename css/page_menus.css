@@ -1,0 +1,373 @@
+/* HEADER */
+main {
+    background-color: #f6f6f6;
+}
+
+header {
+    height: 3rem;
+    position: relative;
+}
+
+header h1 {
+    font-family: 'Shrikhand', cursive;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+header a {
+    position: absolute;
+    left: 1.2rem;
+    top: 0.5rem;
+}
+
+header i {
+    font-size: 1.8rem;
+    color: black;
+}
+
+.fa-arrow-left:hover {
+    color: #9356DC;
+}
+
+header i:visited {
+    color: black;
+    text-decoration: none;
+}
+
+/* ENTETE IMAGE */
+.entete-img img {
+    width: 100%;
+    height: 18rem;
+    object-fit: cover;
+    z-index: auto;
+}
+
+/* SECTION MENU */
+/* ENTETE */
+#menu {
+    position: relative;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    background-color: #f6f6f6;
+    bottom: 3rem;
+    z-index: 1;
+}
+
+#menu header {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 3rem;
+}
+
+.menu_title {
+    font-family: 'Shrikhand', cursive;
+    padding-top: 2rem;
+}
+
+.heart-like i,
+.heart-gradient i {
+    font-size: 2rem;
+    cursor: grab;
+    transition: all .3s ease-in-out;
+}
+
+.heart-like i {
+    opacity: 1;
+}
+
+.heart-gradient i {
+    opacity: 0;
+}
+
+.heart-like i:hover {
+    opacity: 0;
+}
+
+.heart-gradient i:hover {
+    opacity: 1;
+    background: linear-gradient(90deg, #FF79DA, #9356DC);
+    -webkit-background-clip: text;
+    color: transparent;
+    border-radius: 0.5rem;
+}
+
+/* PLATS */
+.plats section {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.plats section h2 {
+    font-weight: lighter;
+    font-size: 100%;
+    margin-bottom: 0;
+}
+
+.plats hr {
+    height: 0.2rem;
+    width: 2.6rem;
+    border: none;
+    background-color: #99E2D0;
+    margin-left: 0;
+    margin-bottom: 2rem;
+}
+
+.plats div {
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px #0000002e;
+    margin-bottom: 2rem;
+    height: 4rem;
+    position: relative;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    animation: fadeIn 0.7s ease-in both, top 0.5s linear;
+}
+
+.plats div:nth-of-type(1) {
+    animation-delay: 0s;
+}
+
+.plats div:nth-of-type(2) {
+    animation-delay: 0.1s;
+}
+
+.plats div:nth-of-type(3) {
+    animation-delay: 0.2s;
+}
+
+@keyframes fadeIn {
+    from {
+        top: 4rem;
+        opacity: 0;
+    }
+
+    to {
+        top: 0rem;
+        opacity: 1;
+    }
+}
+
+.price {
+    position: absolute;
+    right: 2rem;
+    top: 1rem;
+    font-weight: bold;
+}
+
+.plats h3,
+.description {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.plats h3 {
+    position: absolute;
+    top: 0;
+}
+
+.description {
+    position: absolute;
+    top: 2rem;
+    font-size: 95%;
+    width: 70%;
+}
+
+.plats span {
+    position: absolute;
+    background-color: #99E2D0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    bottom: 0rem;
+    width: 0%;
+    justify-content: center;
+    border-top-right-radius: 0.9rem;
+    border-bottom-right-radius: 0.9rem;
+    left: 100%;
+    color: #fff;
+    font-size: 1.375rem;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+
+.fa-check-circle {
+    visibility: hidden;
+}
+
+.plats div:hover span {
+    left: 80%;
+    visibility: visible;
+    width: 20%;
+}
+
+.plats div:hover .fa-check-circle {
+    visibility: visible;
+}
+
+.plats div:hover .price {
+    left: 65%;
+}
+
+.plats div:hover .description {
+    width: 50%;
+}
+
+.plats div:hover i {
+    animation: rotation 0.3s linear 0.3s;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* COMMANDER */
+.commander {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+}
+
+.commander a {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem 1rem 1rem 1rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+    background-size: 200%;
+    background-image: linear-gradient(90deg, #FF79DA, #9356DC);
+    background-position: 80%;
+    box-shadow: 0 0 10px #0000002e;
+    position: relative;
+    width: 9rem;
+    text-align: center;
+}
+
+.commander a:hover {
+    transform: scale(1.05);
+    background-position: 30%;
+}
+
+/* MOBILE */
+@media (min-width: 400px) {
+
+    .heart-like i,
+    .heart-gradient i {
+        position: absolute;
+        right: 2rem;
+        top: 2rem;
+    }
+
+    .price {
+        position: absolute;
+        top: 1rem;
+        font-weight: bold;
+        left: 85%;
+    }
+
+    .plats h3 {
+        position: absolute;
+        top: 0;
+        width: 70%;
+    }
+}
+
+@media (max-width: 320.98px) {
+    .menu_title {
+        font-size: 130%;
+    }
+
+    .heart-like i,
+    .heart-gradient i {
+        position: absolute;
+        right: 0.8rem;
+        top: 1.9rem;
+    }
+
+    .price {
+        position: absolute;
+        left: 80%;
+        font-weight: bold;
+        top: 2rem;
+        font-size: 95%;
+    }
+
+    .plats h3 {
+        position: absolute;
+        padding-top: 0;
+        width: 70%;
+        font-size: 100%;
+    }
+}
+
+@media (min-width: 321px) {
+
+    .heart-like i,
+    .heart-gradient i {
+        position: absolute;
+        right: 1.5rem;
+        top: 1.9rem;
+    }
+
+    .price {
+        position: absolute;
+        top: 2rem;
+        font-weight: bold;
+        left: 85%;
+    }
+
+    .plats h3 {
+        position: absolute;
+        top: 0;
+        width: 70%;
+        font-size: 100%;
+    }
+}
+
+/* TABLET & DESKTOP */
+@media (min-width: 767px) {
+
+    .heart-like i,
+    .heart-gradient i {
+        right: 30%;
+    }
+
+    .menu_title {
+        font-size: large;
+        text-align: center;
+    }
+
+    .plats h2,
+    .plats hr {
+        margin-left: 30%;
+        font-size: 130%;
+    }
+
+    .plats div {
+        margin-left: 30%;
+        margin-right: 30%;
+        align-items: center;
+    }
+
+    .plats div:hover span {
+        left: 80%;
+        width: 20%;
+    }
+
+    .price {
+        left: 80%;
+    }
+
+    .plats div:hover .price {
+        left: 70%;
+    }
+}

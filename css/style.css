@@ -1,0 +1,59 @@
+/*  POLICES  */
+/* ROBOTO */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,500;1,300&display=swap');
+/* SHRIKHAND */
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+/* GENERAL */
+html {
+    width: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+p {
+    font-family: 'Roboto Light', arial;
+}
+
+h2,
+h3,
+h4,
+span {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* FOOTER */
+footer {
+    background-color: #353535;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+footer h3 {
+    font-family: 'Shrikhand', cursive;
+    margin-left: 2.5rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer li {
+    font-family: 'Roboto', sans-serif;
+    list-style-type: none;
+    margin-bottom: 0.5rem;
+}
+
+footer li:hover a {
+    color: #FF79DA;
+}
+
+@media (min-width: 767px) {
+    footer {
+        flex-direction: row;
+    }
+}
